@@ -1,16 +1,28 @@
-document.querySelector('#submit-twood').addEventListener('click', () => {
-  const newText = document.querySelector('#twood-input').value
-  // document.querySelector('.twood').innerText = newText
-  document.querySelector('#twood-input').value = ''
+const twoodButton = document.querySelector('#submit-twood');
+twoodButton.addEventListener('click',sendTwood);
 
-  const newTwood = document.createElement('div')
-  document.querySelector('.twoods-container').append(newTwood)
-  // newTwood.classList.add('twood')
-  // newTwood.innerText = newText
+function sendTwood(){
+  // getText()
+  const txtInputButton = document.querySelector('#twood-input');
+  const txt = txtInputButton.value;
+  console.log(txt);
+  if(txt === ''){
+  alert('Please enter some text');
+  } else{
+    displayText = document.querySelector('.twood');
+    displayText.innerText = txt;
+  }
 
 
-})
+  // overwriteExistingText
 
-setTimeout(() => {
-  document.querySelector('.cutoff').classList.remove('hidden')  
-}, 200000)
+
+}
+
+
+const txtInputButton = document.querySelector('#twood-input');
+const txt = txtInputButton.innerText;
+
+console.log(txt);
+console.log(txt === '');
+console.log('its working');
