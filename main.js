@@ -4,7 +4,11 @@
 
 function buttonClick() {
   let twoodText = document.querySelector("#twood-input").value;
-  document.querySelector(".twood").innerText = twoodText;
+  let twoodBox = document.createElement("div");
+  let divParent = document.querySelector(".twoods-container");
+  divParent.append(twoodBox);
+  twoodBox.classList.add("newDiv");
+  twoodBox.innerText = twoodText;
   document.querySelector("#twood-input").value = "";
 }
 
@@ -23,4 +27,4 @@ function timeSet() {
   setTimeout(function(){removeHid();}, 3000);
 }
 
-timeSet()
+// timeSet()
