@@ -4,7 +4,7 @@
 
 function buttonClick() {
   let twoodText = document.querySelector("#twood-input").value;
-  document.querySelector(".twood").innerHTML = twoodText;
+  document.querySelector(".twood").innerText = twoodText;
   document.querySelector("#twood-input").value = "";
 }
 
