@@ -9,3 +9,18 @@ function buttonClick() {
 }
 
 document.querySelector("#submit-twood").addEventListener("click", buttonClick);
+
+
+function removeHid() {
+  var hidVar = document.querySelector(".cutoff");
+  hidVar.classList.remove('hidden');
+}
+
+// removeHid();
+
+
+function timeSet() {
+  setTimeout(function(){removeHid();}, 3000);
+}
+
+timeSet()
